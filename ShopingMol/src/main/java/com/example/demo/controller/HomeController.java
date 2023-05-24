@@ -13,7 +13,7 @@ public class HomeController {
 	
 	@GetMapping("notice")
 	public String notice() {
-		return "board/notice";
+		return "admin/notice";
 	}
 
 }

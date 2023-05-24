@@ -35,6 +35,7 @@
 						aria-current="page" href="/">홈</a></li>
 					<li class="nav-item"><a class="nav-link" href="#!">로그인</a></li>
 					<li class="nav-item"><a class="nav-link" href="#!">회원가입</a></li>
+					<li class="nav-item"><a class="nav-link" href="adminLogin">관리자로그인</a></li>
 					<li class="nav-item"><a class="nav-link" href="notice">공지사항</a></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="navbarDropdown" href="#"
