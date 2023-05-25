@@ -24,7 +24,7 @@ public class Notice {
 	private Long id;
 	@ManyToOne
 	@JoinColumn(name = "writer")
-	private Admin admin;
+	private Customer customer;
 	private String subject;
 	private String contents;
 	private Date regDate;

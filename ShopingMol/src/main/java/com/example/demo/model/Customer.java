@@ -34,6 +34,7 @@ public class Customer {
 	private String phone;
 	private String gender;
 	private String name;
+	private String role;
 
 	@OneToMany(mappedBy = "customer", cascade = CascadeType.REMOVE)
 	@JsonIgnore
@@ -46,4 +47,8 @@ public class Customer {
 	@OneToMany(mappedBy = "customer", cascade = CascadeType.REMOVE)
 	@JsonIgnore
 	private List<Cart> cart;
+	
+	@OneToMany(mappedBy = "customer", cascade = CascadeType.REMOVE)
+	@JsonIgnore
+	private List<Notice> notice;
 }

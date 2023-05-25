@@ -17,6 +17,7 @@
 	rel="stylesheet">
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/styles.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
 <body>
 	<!-- Navigation-->
@@ -33,9 +34,8 @@
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="/">홈</a></li>
-					<li class="nav-item"><a class="nav-link" href="#!">로그인</a></li>
-					<li class="nav-item"><a class="nav-link" href="#!">회원가입</a></li>
-					<li class="nav-item"><a class="nav-link" href="adminLogin">관리자로그인</a></li>
+					<li class="nav-item"><a class="nav-link" href="login">로그인</a></li>
+					<li class="nav-item"><a class="nav-link" href="SignUp">회원가입</a></li>
 					<li class="nav-item"><a class="nav-link" href="notice">공지사항</a></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="navbarDropdown" href="#"
