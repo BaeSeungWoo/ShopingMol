@@ -25,8 +25,9 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long num;
-	private String email;
+	private String username;
 	private String password;
+	private String email;
 	@Embedded
 	private Address address;
 	private String birth;

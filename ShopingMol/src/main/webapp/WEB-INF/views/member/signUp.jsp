@@ -21,6 +21,18 @@
 		</div>
 		<br />
 		<div>
+			<label for="email">이메일</label> <input
+				class="form-control" type="text" id="email"
+				name="email">
+		</div>
+		<br />
+		<div>
+			<label for="email">이름</label> <input
+				class="form-control" type="text" id="name"
+				name="name">
+		</div>
+		<br />
+		<div>
 			<label for="birth">생년월일</label> <input class="form-control"
 				type="text" id="birth" name="birth">
 		</div>
@@ -70,7 +82,7 @@
 		</div>
 		<br />
 		<div class="col">
-			<input class="form-control btn btn-primary" type="submit" id="SignUp"
+			<input class="form-control btn btn-primary" type="submit" id="SignUpBtn"
 				value="회원가입"></input>
 		</div>
 	</div>
@@ -127,5 +139,41 @@
 			}
 		}).open();
 	}
+	
+	$("#SignUpBtn").click(function(){
+		addr = {
+				zipcode: $("#zipcode").val(),
+				address1: $("#address1").val(),
+				address2: $("#address2").val()
+			}
+		data = {
+				phone: $("#phone").val(),
+				age: $("#age").val(),
+				birth: $("#birth").val(),
+				email: $("#email").val(),
+				name: $("#name").val(),
+				password: $("#password").val(),
+				username: $("#username").val(),
+				gender: $("input[name=gender]:radio:checked").val(),
+				address: addr	
+		}
+		$.ajax({
+			type : "post",
+			url : "/SignUp",
+			contentType : "application/json;charset=utf-8",
+			data : JSON.stringify(data)
+		})
+		.done(function(resp) {
+			console.log(resp)
+			if(resp == "success") {
+				location.href = "/"
+			} else {
+				alert("아이디 중복")
+			}
+		})
+		.fail(function(e) {
+			alert("error"+e)
+		})
+	})
 </script>
 <%@include file="../include/footer.jsp"%>

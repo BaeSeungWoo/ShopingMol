@@ -12,9 +12,4 @@ public class AdminController {
 	@Autowired
 	private AdminService adminService;
 	
-	@GetMapping("adminLogin")
-	public String adminLogin() {
-		return "admin/adminLogin";
-	}
-
 }

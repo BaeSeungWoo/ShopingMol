@@ -4,6 +4,7 @@
 <section class="py-5">
 	<div class="container">
 		<h2>로그인</h2>
+		<form action = "/login" method = "post">
 		<div>
 			<label for="username">아이디</label> <input class="form-control"
 				type="text" id="username" name="username">
@@ -18,15 +19,16 @@
 			<div class="col-10"></div>
 			<div class="col">
 				<input class="form-control btn btn-primary" type="submit"
-					id="Login" value="로그인"></input>
+					id="LoginBtn" value="로그인"></input>
 			</div>
 		</div>
+		</form>
 	</div>
 </section>
 <%@include file="../include/footer.jsp"%>
 
 <script>
-	$("#Login").click(function() {
+	$("#LoginBtn").click(function() {
 		if ($("#username").val() == "") {
 			alert("아이디를 입력하세요")
 			return false;

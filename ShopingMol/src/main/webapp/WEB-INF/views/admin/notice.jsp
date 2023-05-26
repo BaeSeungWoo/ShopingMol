@@ -34,6 +34,12 @@
 				</tr>
 			</tbody>
 		</table>
+		<sec:authorize access = "hasRole('ADMIN')">
+		<div class="col-1">
+			<input class="form-control btn btn-primary" type="submit" id="writeNotice"
+				value="작성"></input>
+		</div>
+		</sec:authorize>
 	</div>
 </section>
 <%@include file="../include/footer.jsp"%>

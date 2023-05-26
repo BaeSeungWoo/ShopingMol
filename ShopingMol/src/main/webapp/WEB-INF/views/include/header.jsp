@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="sec"
+	uri="http://www.springframework.org/security/tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,11 +35,18 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<sec:authentication property="principal" var="p" />
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="/">홈</a></li>
-					<li class="nav-item"><a class="nav-link" href="login">로그인</a></li>
-					<li class="nav-item"><a class="nav-link" href="SignUp">회원가입</a></li>
+					<sec:authorize access="isAnonymous()">
+						<li class="nav-item"><a class="nav-link" href="/login">로그인</a></li>
+						<li class="nav-item"><a class="nav-link" href="/SignUp">회원가입</a></li>
+					</sec:authorize>
+					<sec:authorize access="isAuthenticated()">
+						<li class="nav-item">${p.username}님 반갑습니다</li>
+						<li class="nav-item"><a class="nav-link" href="/logout">로그아웃</a></li>
+					</sec:authorize>
 					<li class="nav-item"><a class="nav-link" href="notice">공지사항</a></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="navbarDropdown" href="#"
