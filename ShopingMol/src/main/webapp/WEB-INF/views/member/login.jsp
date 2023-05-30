@@ -38,16 +38,5 @@
 			alert("비밀번호를 입력하세요")
 			return false;
 		}
-		
-/* 		$.ajax({
-			type : "post",
-			url : "Login",
-			contentType : "application/json;charset=utf-8",
-			data : JSON.stringify(data)
-		})
-		.done(function(resp)) {
-			alert("관리자로 로그인하셨습니다.")
-			location.href = "/admin";
-		} */
 	})
 </script>

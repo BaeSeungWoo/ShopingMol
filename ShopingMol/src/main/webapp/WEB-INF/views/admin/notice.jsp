@@ -14,31 +14,23 @@
 				</tr>
 			</thead>
 			<tbody>
+			<c:forEach items="${notice }" var="notice">
 				<tr>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
+					<td>${notice.subject }</td>
+					<td>${notice.customer.name }</td>
+					<td><fmt:formatDate value = "${notice.regDate }" pattern="yyyy/MM/dd"/></td>
+					<td>${notice.count }</td>
 				</tr>
-				<tr>
-					<td>2</td>
-					<td>2</td>
-					<td>2</td>
-					<td>2</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-				</tr>
+			</c:forEach>
 			</tbody>
 		</table>
 		<sec:authorize access = "hasRole('ADMIN')">
+		<form action = "/admin/writeNotice" method = "get">
 		<div class="col-1">
 			<input class="form-control btn btn-primary" type="submit" id="writeNotice"
 				value="작성"></input>
 		</div>
+		</form>
 		</sec:authorize>
 	</div>
 </section>

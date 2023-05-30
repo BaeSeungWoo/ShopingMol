@@ -141,6 +141,43 @@
 	}
 	
 	$("#SignUpBtn").click(function(){
+		if($("#username").val() == ""){
+			alert("아이디를 입력해주세요.")
+			return false;
+		} else if ($("#password").val() == ""){
+			alert("비밀번호를 입력해주세요.")
+			return false;
+		} else if ($("#passwordCheck").val() == ""){
+			alert("비밀번호 확인란을 입력해주세요.")
+			return false;
+		} else if ($("#password").val() != $("#passwordCheck").val()){
+			alert("비밀번호가 같지 않습니다.")
+			return false;
+		} else if ($("#email").val() == ""){
+			alert("이메일을 입력해주세요.")
+			return false;
+		} else if ($("#name").val() == ""){
+			alert("이름을 입력해주세요.")
+			return false;
+		} else if ($("#birth").val() == ""){
+			alert("생년월일을 입력해주세요.")
+			return false;
+		} else if ($("#age").val() == ""){
+			alert("나이를 입력해주세요.")
+			return false;
+		} else if ($("#phone").val() == ""){
+			alert("휴대전화 번호를 입력해주세요.")
+			return false;
+		} else if ($("#zipcode").val() == ""){
+			alert("우편번호를 선택하세요.")
+			return false;
+		} else if ($("#address2").val() == ""){
+			alert("상세주소를 입력해주세요.")
+			return false;
+		} else if ($("#gender").val() == ""){
+			alert("성별을 선택해주세요.")
+			return false;
+		} 
 		addr = {
 				zipcode: $("#zipcode").val(),
 				address1: $("#address1").val(),

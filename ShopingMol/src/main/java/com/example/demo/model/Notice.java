@@ -9,6 +9,14 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.DynamicInsert;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,6 +25,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "noticeList")
+@DynamicInsert
 public class Notice {
 
 	@Id
@@ -27,7 +36,12 @@ public class Notice {
 	private Customer customer;
 	private String subject;
 	private String contents;
+	@CreationTimestamp
+	@Temporal(TemporalType.TIMESTAMP)
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "Asia/Seoul")
 	private Date regDate;
 	private Date modifyDate;
+	@ColumnDefault("0")
+	private Long count;
 
 }
