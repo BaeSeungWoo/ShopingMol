@@ -16,7 +16,7 @@
 			<tbody>
 			<c:forEach items="${notice }" var="notice">
 				<tr>
-					<td>${notice.subject }</td>
+					<td><a href = "noticeDetail/${notice.id }">${notice.subject }</a></td>
 					<td>${notice.customer.name }</td>
 					<td><fmt:formatDate value = "${notice.regDate }" pattern="yyyy/MM/dd"/></td>
 					<td>${notice.count }</td>

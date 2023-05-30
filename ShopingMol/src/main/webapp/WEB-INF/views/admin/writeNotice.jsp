@@ -8,7 +8,7 @@
 			value="${p.username}" readonly="readonly"> <br /> <br /> <label>제목</label>
 		<input type='text' name='subject' id="subject" size='70'> <br />
 		<br />
-		<textarea rows="20" cols="90" name='contents' id="contents">test</textarea>
+		<textarea rows="20" cols="90" name='contents' id="contents"></textarea>
 		<br />
 		<div class="row justify-content-end">
 			<div class="col">

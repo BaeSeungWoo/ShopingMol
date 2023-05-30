@@ -44,10 +44,10 @@
 						<li class="nav-item"><a class="nav-link" href="/SignUp">회원가입</a></li>
 					</sec:authorize>
 					<sec:authorize access="isAuthenticated()">
-						<li class="nav-item"><a class="nav-link" href="#!">${p.username}님 반갑습니다</a></li>
+						<li class="nav-item"><a class="nav-link" href="#!">${p.user.name}님 반갑습니다</a></li>
 						<li class="nav-item"><a class="nav-link" href="/logout">로그아웃</a></li>
 					</sec:authorize>
-					<li class="nav-item"><a class="nav-link" href="notice">공지사항</a></li>
+					<li class="nav-item"><a class="nav-link" href="/notice">공지사항</a></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" id="navbarDropdown" href="#"
 						role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>

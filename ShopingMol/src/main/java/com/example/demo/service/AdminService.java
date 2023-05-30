@@ -9,5 +9,13 @@ public interface AdminService {
 	public void writeNotice(String username, Notice notice);
 	
 	public List<Notice> findAll();
+	
+	public Notice noticeDetail(Long id);
+	
+	public Long noticeCount(Long id);
+	
+	public void modify(Notice notice);
+	
+	public void delete(Long id);
 
 }

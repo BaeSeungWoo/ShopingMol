@@ -40,7 +40,6 @@ public class Notice {
 	@Temporal(TemporalType.TIMESTAMP)
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "Asia/Seoul")
 	private Date regDate;
-	private Date modifyDate;
 	@ColumnDefault("0")
 	private Long count;
 

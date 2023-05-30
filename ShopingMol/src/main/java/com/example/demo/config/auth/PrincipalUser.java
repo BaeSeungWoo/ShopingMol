@@ -8,6 +8,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.example.demo.model.Customer;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
 public class PrincipalUser implements UserDetails {
 
 	private Customer user;
